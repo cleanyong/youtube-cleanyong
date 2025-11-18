@@ -18,4 +18,6 @@ C8En2lnl9ndHbHGDSTzHznX7Z1rgeHDbieMFyimz++Y=
 ```
 
 **你见到我的签名key，就把它保存下来，我们今后p2p的安全通讯用到**
+## 想私下联系我请看我的视频，肯定能找到我的email
+
 
