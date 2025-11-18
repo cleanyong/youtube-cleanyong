@@ -1,7 +1,7 @@
 # youtube-cleanyong
 这个是为我的youtube channel @cleanyong
 
-# 我的公钥(抗量子计算机的啊)
+# 我的公钥(抗量子计算机的啊), 用于验证我签名的文件
 ML-DSA-65 (CRYSTALS-Dilithium) keys generated.
 Public key  (Base64):
 ```
