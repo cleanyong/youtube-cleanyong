@@ -1,12 +1,15 @@
+## 经过一个多月的DIY，我们已经建立围绕安全点线面的所有工具，这里把他们跟市面上的开源的命令行进行一个对比
+
+# 中文
 | 项目 | 功能 | 常见开源命令行替代 |
 | --- | --- | --- |
 | EdDSA-keygen | 生成/测试 Ed25519 密钥对并导出二进制+Base64 | `ssh-keygen -t ed25519`，`openssl genpkey -algorithm ED25519` |
-| adhoc-chat | 临时 2 人聊天室（WebSocket 服务） | `ncat -l --chat`（Ncat），`weechat`（临时房间） |
+| adhoc-chat | 临时 2 人聊天室（WebSocket 服务）-- 中文名：尬聊 | ... |
 | alice-send | 生成 Alice 的 DH 私钥/公钥，可用 Bob 公钥算共享密钥 | `openssl genpkey -genparam -algorithm DH` + `openssl pkeyutl -derive` |
 | alice-sign | 用本地 Ed25519 私钥签 JSON，输出公钥 | `openssl pkeyutl -sign -inkey key.pem -rawin`（Ed25519） |
 | bob-send | 读取 Alice 公钥，生成 Bob DH 密钥并算共享密钥 | 同上 `openssl genpkey`/`pkeyutl -derive` |
 | bob-verify | 用保存的 Alice 公钥验证消息签名 | `openssl pkeyutl -verify`，`openssl dgst -verify -signature sig.bin` |
-| chat-encryption-helper | 基于 DH 握手的聊天 AES-256 加解密助手 | `signal-cli`（端到端加密聊天） |
+| chat-encryption-helper | 基于 DH 握手的聊天 AES-256 加解密助手, 可以使用任何信道来传输，比如email，聊天室，论坛，短信etc | `signal-cli`（端到端加密聊天） |
 | cmd-call-kdbx | KeePass KDBX 搜索/创建/生成 keyfile 的 CLI | `keepassxc-cli show/find` |
 | create-DNA-for-file | 文件/STDIN 做 SHA-256，输出十进制/十六进制大整数 | `sha256sum file`，`openssl dgst -sha256 file` |
 | create-private-key | 生成 DH 私钥/参数（MODP14 等） | `openssl genpkey -algorithm DH -pkeyopt group:modp_2048` |
@@ -21,7 +24,7 @@
 | gen-priv-dh | 生成 DH 私钥，给定 p/q 寻找生成元 g | `openssl genpkey -genparam -algorithm DH`（输出 p/g/q） |
 | generate-password-for-cmd-line | 生成 36–45 位 Base62 密码 | `pwgen -s 44`，`apg -m36 -x45 -M SNCL` |
 | jiming-pub-key-publish | Web 表单存储/分享 Base64 公钥（SQLite） | `gpg --send-keys <keyid>`（HKP），或 `age-keygen` + `curl` 到 keyserver |
-| kdbx-forum | 用单个 KeePass KDBX 作为“论坛数据库”的 Web 服务 | 通用论坛：`discourse`、`nodebb`（CLI 启动服务） |
+| kdbx-forum | 用单个 KeePass KDBX 作为“论坛数据库”的 Web 服务，跟朋友们呼唤 .kdbx 文件就行 | NA |
 | kdf-argon2id | Argon2id 密码派生 CLI | `argon2 <pwd> -id -m 16 -t 3 -p 1 -l 32` |
 | mac-monitoring | 监控 macOS 出站 TCP/UDP，记录日志 | `nettop -P -L 1 -n`，`lsof -i -P -n` |
 | songmi-send-key-4-bob-use | 带 TTL 的一次性密钥/秘密分享（AES-GCM） | `magic-wormhole send`，`onetimesecret` CLI/自建 |
@@ -29,7 +32,7 @@
 
 
 
-
+## English
 
 | Project | What it does | Open-source CLI alternative(s) |
 | --- | --- | --- |
