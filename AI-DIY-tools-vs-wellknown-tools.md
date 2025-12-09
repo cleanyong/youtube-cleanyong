@@ -23,11 +23,11 @@
 | 线 | full-DH-with-sign | 带签名的 DH 握手 + 加密消息（Web 服务） | `openssl s_server/s_client`（ECDHE+证书），或 `noise-cli`、`signal-cli` |
 | 线 | gen-priv-dh | 生成 DH 私钥，给定 p/q 寻找生成元 g | `openssl genpkey -genparam -algorithm DH`（输出 p/g/q） |
 | 点 or 线 | generate-password-for-cmd-line | 生成 36–45 位 Base62 密码 | `pwgen -s 44`，`apg -m36 -x45 -M SNCL` |
-| 线 | jiming-pub-key-publish | Web 表单存储/分享 Base64 公钥（SQLite） | `gpg --send-keys <keyid>`（HKP），或 `age-keygen` + `curl` 到 keyserver |
+| 线 | jiming-pub-key-publish | Web 表单存储/分享 Base64 公钥（SQLite）-- 中文名：极名 | `gpg --send-keys <keyid>`（HKP），或 `age-keygen` + `curl` 到 keyserver |
 | 面 or 线 | kdbx-forum | 用单个 KeePass KDBX 作为“论坛数据库”的 Web 服务，跟朋友们呼唤 .kdbx 文件就行 | NA |
 | 点 | kdf-argon2id | Argon2id 密码派生 CLI | `argon2 <pwd> -id -m 16 -t 3 -p 1 -l 32` |
 | 点 | mac-monitoring | 监控 macOS 出站 TCP/UDP，记录日志 | `nettop -P -L 1 -n`，`lsof -i -P -n` |
-| 线 | songmi-send-key-4-bob-use | 带 TTL 的一次性密钥/秘密分享（AES-GCM） | `magic-wormhole send`，`onetimesecret` CLI/自建 |
+| 线 | songmi-send-key-4-bob-use | 带 TTL 的一次性密钥/秘密分享（AES-GCM） -- 中文名： 送蜜 | `magic-wormhole send`，`onetimesecret` CLI/自建 |
 | 线 | ssh-key-gen-ed25519 | 极简版 ssh-keygen 生成 Ed25519 | `ssh-keygen -t ed25519 -f id_ed25519 -C comment` |
 
 
